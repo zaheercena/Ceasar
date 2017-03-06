@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.zaheercena.arul.ceasar.MainActivity">
+
+    <TextView
+        android:text="Enter PlainText to Encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="16dp"
+        android:id="@+id/raw"
+        android:layout_alignParentEnd="true"
+        android:hint="Plaintext here"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Enter Key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="102dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/raw"
+        android:layout_alignStart="@+id/raw" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/raw"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="90dp"
+        android:id="@+id/key"
+        android:hint="Key" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_marginTop="58dp"
+        android:id="@+id/yield"
+        android:hint="Yield"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Ceasar Now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/button"
+        android:onClick="encryept"
+        android:layout_below="@+id/key"
+        android:layout_toEndOf="@+id/textView2" />
+</RelativeLayout>
